@@ -1,0 +1,264 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+ 
+body{
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 16px;
+    line-height: 2; /*INTERLINEADO*/
+}
+
+/*GLOBALES*/
+.contenedor{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto; /*CENTRA EL CONTENIDO HORIZONTALMENTE*/
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4{
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.2;
+}
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 32px;
+}
+h4{
+    font-size: 28px
+}
+
+img{
+    max-width: 100%;
+}
+
+/*UTILIDADES*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/*HEADER*/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header__texto{
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 50px;
+
+}
+@media (min-width: 768px){
+    .header__texto{
+        margin-top: 150px;
+    }
+}
+
+.barra{
+    padding-top: 40px;
+}
+
+@media (min-width: 768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+}
+.logo{
+    color: #FFFFFF;
+}
+.logo__nombre{
+    font-weight: normal;
+}
+.logo__bold{
+    font-weight: bold;
+}
+
+@media (min-width: 768px){
+    .navegacion{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+@media (min-width: 768px){
+    .contenido-ppal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 40px;
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+}
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.btn{
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border: none;
+}
+@media (min-width: 768px) {
+    .btn{
+        display: inline-block; /*TOMA EL ESPACIO QUE REQUIERE PERO SI NECESITO MARGIN O WIDHT LO RESPETA*/
+    }
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn--primario{
+    background-color: black;
+}
+
+.btn--secundario{
+    background-color: #784D3C;
+}
+
+/*CURSOS*/
+.cursos{
+    list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+}
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label,
+.curso__label{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+.widget-curso__info{
+    font-weight: normal;
+}
+.widget-curso__label, 
+.widget-curso__info{
+    font-size: 20px;
+}
+
+.footer{
+    background-color: black;
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+
+/*SOBRE NOSOTROS*/
+@media (min-width: 768px){
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+    /*
+    .sobre-nosotros__img,
+    .sobre-nosotros__texto{
+        flex-basis: 50%; /*basis es más corto, pero es lo mismo que width, que ocupe el 50% del contenedor EJ:
+        .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 50%)
+        column-gap: 20px;
+    }
+}*/
+
+.curso{
+    padding: 30px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 768px){
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }
+}
+
+/*CONTACTO*/
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: #FFFFFF;
+    margin: -50px auto 0 auto; /*margin en negativo se sobrepone en la img*/
+    width: 95%; /*el form ocupa el 95% del container*/
+    padding: 50px;
+}
+
+.campo{
+    display: flex; /*nos permite acceder a las propiedades dentro del div padre*/
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.campo__label{
+    flex: 0 0 90px; /*no crece en tamaño, pero lo deja fijo en 90 px*/
+    text-align: right;
+}
+.campo__field{
+    flex: 1; /*factor de crecimiento*/
+    border: solid 1.3px #e1e1e1;
+}
+
+.campo__field--textarea{
+    height: 200px;
+    resize: none;
+}
+
+.btn-campo{
+    display: flex;
+    justify-content: end;
+}
