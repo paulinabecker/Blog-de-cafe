@@ -4,7 +4,9 @@ Proyecto individual
 
 Proyecto finalizado
 
-Acceso al proyecto: https://github.com/paulinabecker/Blog-de-cafe
+Acceso al proyecto GitHub: https://github.com/paulinabecker/Blog-de-cafe
+
+Acceso al proyecto Netlify: https://amantes-del-cafe.netlify.app/
 
 Descripción:
 
@@ -14,3 +16,4 @@ El proyecto utiliza tecnologías HTML5, CSS, CSS Flexbox y Grid, y JavaScript (m
 
 Librerías:
 [Modernizr](https://modernizr.com/) v3.6.0: Utilizado para detectar capacidades del navegador y ajustar la funcionalidad en consecuencia.
+
